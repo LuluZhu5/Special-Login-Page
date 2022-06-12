@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>Owls that won't peep passwords</title>
+    <link rel="stylesheet" href="Login page.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#password').focus(function(){
+                $('#owl').addClass('password');
+            }).blur(function(){
+                $('#owl').removeClass('password');
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <div class="login-box">
+        <div class="owl" id="owl">
+            <div class="hand"></div>
+            <div class="hand hand-r"></div>
+            <div class="arms">
+                <div class="arm"></div>
+                <div class="arm arm-r"></div>
+            </div>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Account">
+            <input type="password" placeholder="Password" id="password">
+            <button>Log in</button>
+        </div>
+    </div>
+</body>
+
+</html>
